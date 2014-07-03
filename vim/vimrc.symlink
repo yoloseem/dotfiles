@@ -22,7 +22,12 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'mitsuhiko/vim-jinja'
+NeoBundle 'mutewinter/nginx.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
 
 " Required for NeoBundle
 call neobundle#end()
@@ -40,7 +45,6 @@ NeoBundleCheck
 " Search
 set ignorecase
 set hlsearch
-
 " Soft tabs
 set et
 set ts=4 sw=4 sts=4
@@ -80,6 +84,10 @@ autocmd BufRead,BufNewFile,BufEnter *.rst setlocal tabstop=3
 autocmd BufRead,BufNewFile,BufEnter *.rst setlocal softtabstop=3
 autocmd BufRead,BufNewFile,BufEnter *.rst setlocal shiftwidth=3
 
+" Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.markdown set filetype=markdown
+
 " Whitespaces
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
@@ -92,3 +100,10 @@ autocmd FileType python match OverLength /\%>80v.\+\|\s\+$\|^\s*\n\+\%$/
 " 100 columns for HTML
 autocmd BufRead *.html highlight OverLength ctermbg=darkred ctermfg=white
 autocmd BufRead *.html match OverLength /\%100v.\+/
+
+" git-gutter
+autocmd BufRead,BufNewFile * set updatetime=600
+let g:gitgutter_sign_column_always = 1
+nmap gh <Plug>GitGutterNextHunk
+nmap gH <Plug>GitGutterPrevHunk
+highlight clear SignColumn
