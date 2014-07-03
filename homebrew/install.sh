@@ -31,5 +31,9 @@ if test ! $(which git && git --version | grep "git version 2"); then
   echo "  Installing git 2.0 for you."
   brew upgrade git
 fi
+if test ! $(which ack); then
+  echo "  Installing ack for you."
+  brew install ack
+fi
 
 exit 0
