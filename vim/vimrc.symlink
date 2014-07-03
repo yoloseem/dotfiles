@@ -13,15 +13,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " Required for NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Required for NeoBundle
-call neobundle#end()
-
-" Syntax highlight
-syntax on
-filetype on
-filetype plugin on
-filetype indent on
-
+" Bundles
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -31,6 +23,15 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 NeoBundle 'Shougo/neocomplcache'
+
+" Required for NeoBundle
+call neobundle#end()
+
+" Syntax highlight
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
