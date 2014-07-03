@@ -1,4 +1,67 @@
+" vImproved
+set nocompatible
+
+" Search
+set ignorecase
+set hlsearch
+
+" Syntax highlight
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" Soft tabs
+set et
+set ts=4 sw=4 sts=4
+set ai
+
+" Mouse support
+set mouse=a
+
+" Window Splits
+set splitbelow
+set splitright
+
+" Encodings
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp949,korea,iso-2022-kr
+set termencoding=utf-8
+set fileformat=unix
+
+" Python preferences
+autocmd FileType python setlocal autoindent
+autocmd FileType python setlocal expandtab
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal softtabstop=4
+autocmd FileType python setlocal shiftwidth=4
+
+" Web
+autocmd FileType html,javascript,css,scss setlocal autoindent
+autocmd FileType html,javascript,css,scss setlocal expandtab
+autocmd FileType html,javascript,css,scss setlocal tabstop=2
+autocmd FileType html,javascript,css,scss setlocal softtabstop=2
+autocmd FileType html,javascript,css,scss setlocal shiftwidth=2
+
+" rST
+autocmd BufRead,BufNewFile,BufEnter *.rst setlocal autoindent
+autocmd BufRead,BufNewFile,BufEnter *.rst setlocal expandtab
+autocmd BufRead,BufNewFile,BufEnter *.rst setlocal tabstop=3
+autocmd BufRead,BufNewFile,BufEnter *.rst setlocal softtabstop=3
+autocmd BufRead,BufNewFile,BufEnter *.rst setlocal shiftwidth=3
+
+" Whitespaces
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
+" 80 columns
+set colorcolumn=80
+autocmd FileType python highlight OverLength ctermbg=darkred ctermfg=white
+autocmd FileType python match OverLength /\%>80v.\+\|\s\+$\|^\s*\n\+\%$/
+
+" 100 columns for HTML
+autocmd BufRead *.html highlight OverLength ctermbg=darkred ctermfg=white
+autocmd BufRead *.html match OverLength /\%100v.\+/

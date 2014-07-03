@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install git grc coreutils spark
+brew install git grc coreutils spark wget
 
 exit 0
