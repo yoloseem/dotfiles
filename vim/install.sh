@@ -3,4 +3,6 @@
 # Vim
 #
 # This installs NeoBundle and other stuffs.
-source `pwd`/vim/neobundle.sh
+if [ -f ~/.vim/bundle/neobundle.vim ]; then
+    source `pwd`/vim/neobundle.sh
+fi
