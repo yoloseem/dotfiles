@@ -1,0 +1,4 @@
+# .bashrc is ignored in OS X
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi

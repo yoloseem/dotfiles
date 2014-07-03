@@ -1,0 +1,16 @@
+CLICOLOR=1
+LSCOLORS=gxfxcxdxbxegedababacad
+
+export PATH=$PATH:~/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+export EDITOR="vim"
+
+alias ls='ls -G'
+alias ll='ls -hl'
+
+export VCPROMPT_FORMAT='<%b%m%u>'
+export PS1='\[\e[36m\]\w\[\e[m\] \[\e[0;34m\]$(vcprompt)\[\e[m\]\[\e[1;32m\]\$\[\e[m\] '
+
+source virtualenvwrapper_lazy.sh
+source "`brew --prefix`/etc/grc.bashrc"
