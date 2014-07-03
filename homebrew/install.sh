@@ -14,5 +14,6 @@ fi
 
 # Install homebrew packages
 brew install git grc coreutils spark wget
+brew install vim --with-lua
 
 exit 0
