@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'elzr/vim-json'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'mitsuhiko/vim-jinja'
 NeoBundle 'mutewinter/nginx.vim'
