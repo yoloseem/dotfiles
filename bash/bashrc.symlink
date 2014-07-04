@@ -1,6 +1,7 @@
 CLICOLOR=1
 LSCOLORS=gxfxcxdxbxegedababacad
 
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:~/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
@@ -14,3 +15,7 @@ export PS1='\[\e[36m\]\w\[\e[m\] \[\e[0;34m\]$(vcprompt)\[\e[m\]\[\e[1;32m\]\$\[
 
 source virtualenvwrapper_lazy.sh
 source "`brew --prefix`/etc/grc.bashrc"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi

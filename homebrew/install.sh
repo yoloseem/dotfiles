@@ -35,5 +35,6 @@ if test ! $(which ack); then
   echo "  Installing ack for you."
   brew install ack
 fi
+brew install bash-completion
 
 exit 0
