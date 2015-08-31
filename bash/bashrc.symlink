@@ -1,5 +1,14 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 CLICOLOR=1
 LSCOLORS=gxfxcxdxbxegedababacad
+
+export PATH="/usr/local/bin:$PATH"
+source /usr/local/bin/virtualenvwrapper.sh
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:~/bin
@@ -19,3 +28,6 @@ source "`brew --prefix`/etc/grc.bashrc"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+source /usr/local/opt/autoenv/activate.sh
+source /Users/khj/git-completion.bash
