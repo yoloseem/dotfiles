@@ -23,12 +23,14 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'nvie/vim-flake8'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'mitsuhiko/vim-jinja'
 NeoBundle 'mutewinter/nginx.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
 
 " Required for NeoBundle
 call neobundle#end()
@@ -98,9 +100,9 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
 " 80 columns
-set colorcolumn=80
+set colorcolumn=100
 autocmd FileType python highlight OverLength ctermbg=darkred ctermfg=white
-autocmd FileType python match OverLength /\%>80v.\+\|\s\+$\|^\s*\n\+\%$/
+autocmd FileType python match OverLength /\%>100v.\+\|\s\+$\|^\s*\n\+\%$/
 
 " 100 columns for HTML
 autocmd BufRead *.html highlight OverLength ctermbg=darkred ctermfg=white
