@@ -1,6 +1,6 @@
 [user]
-    name = Hyunjun Kim
-    email = khj@linecorp.com
+    name = AUTHORNAME
+    email = AUTHOREMAIL
 
 [credential]
     helper = osxkeychain
