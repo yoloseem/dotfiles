@@ -1,3 +1,1 @@
-# yoloseem does dotfiles
-
-Forked from [holman's](https://github.com/holman/dotfiles).
+Moved to https://github.com/yoloseem/dot
